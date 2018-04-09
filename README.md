@@ -1,27 +1,69 @@
 # NgDigits
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This package make sure avoiding non-digits character for input. NgDigits also support maximum digits and Japanese input.
 
-## Development server
+# Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install ng-digits --save`
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Import NgDigits Module
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {NgDigitsModule} from 'ng-digits';
+import { AppComponent } from './app.component';
 
-## Build
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgDigitsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Integer Number without `,` (eg. 12356)
+```html
+<input appDigits type="text" name="text" id="text"/>
+```
+### Integer Number with `,` (eg. 12,356)
+```html
+<input [appDigits]="[]" type="text" name="text" id="text"/>
+```
+### Decimal Number (eg. 1,235.62)
+```html
+<input [appDigits]="['1.2']" type="text" name="text" id="text"/>
+```
+### Integer Number with maximum digits (eg. 12.356)
+```html
+<input [appDigits]="['1.3']" maxDigits="5" type="text" name="text" id="text"/>
+```
+## Versioning
 
-## Running unit tests
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Qolzam/react-social-network/tags). 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Authors
 
-## Running end-to-end tests
+  - Amir Movahedi
+  - See also the list of [contributors](https://github.com/De-Amir/ng-digits/contributors) who participated in this project.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## How To Support
+- Fork || Star
+## License
 
-## Further help
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/De-Amir/ng-digits/blob/master/LICENSE) file for details.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Credit
+
+Originally made for [@DefideInc][1] by [@De-Amir][2].
+
+[1]: https://github.com/DefideInc
+[2]: https://github.com/De-Amir
+

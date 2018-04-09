@@ -1,19 +1,22 @@
 {
   "name": "ng-digits",
-  "version": "0.0.0",
+  "version": "0.2.3",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
-    "@angular/animations": "^5.2.0",
-    "@angular/common": "^5.2.0",
+    
+  },
+  "peerDependencies": {
+    "@angular/common": "5.x.x",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
     "@angular/forms": "^5.2.0",
@@ -40,9 +43,24 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^2.4.1",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/De-Amir/ng-digits.git"
+  },
+  "keywords": [
+    "angular",
+    "ng-digits",
+    "directive",
+    "validator"
+  ],
+  "bugs": {
+    "url": "https://github.com/De-Amir/ng-digits/issues"
+  },
+  "homepage": "https://github.com/De-Amir/ng-digits"
 }
